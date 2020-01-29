@@ -1,6 +1,34 @@
 import sys, os, glob
 import numpy as np
 import config
+from functools import partial
+
+
+def array_stats(array, stat_type='MAX'):
+    """     calculates array statistics
+    :param array: 3-dimensional np.array (shape n x m x o)
+    :param stat_type: STR (default = 'MAX'; options: 'MIN', 'MEAN', 'MED', STD')
+    :return: 2-dimensional np.array (shape m x o)
+    """
+    stats = np.ones((array.shape[1], array.shape[2])) * np.nan  # instantiate output field
+    for x in range(array.shape[1]):
+        for y in range(array.shape[2]):
+            stats[x, y] = calc_stats(list(array[:, x, y]), stat_type)
+    return np.array(stats)
+
+
+def calc_stats(value_list, stat_type='MAX'):
+    """ calculates statistics of the list of values provided in value_list
+    :param value_list: LIST
+    :param stat_type: STR (default = 'MAX'; options: 'MIN', 'MEAN', 'MED', STD')
+    :return: float
+    """
+    stat_dict = {'MAX': partial(np.nanmax, value_list),
+                 'MIN': partial(np.nanmin, value_list),
+                 'MEAN': partial(np.nanmean, value_list),
+                 'MED': partial(np.nanmedian, value_list),
+                 'STD': partial(np.nanstd, value_list)}
+    return stat_dict[stat_type]()
 
 
 def list_file_type_in_dir(directory, f_ending):
