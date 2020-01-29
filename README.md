@@ -20,7 +20,7 @@ The variable `file_contents` is filled from `fData.read_multiple_files('file_nam
 
 For help with getting started with Python, refer to the [[Requirements]] section.
 
-## Calulate statistics
+## Calculate statistics
 The function `fData.array_stats(array, stat_type)` calculates the following array statistics:
 
 | `stat_type` | Routine |
@@ -31,16 +31,16 @@ The function `fData.array_stats(array, stat_type)` calculates the following arra
 |`MEAN` | Maximum (`numpy.nanmean`) |
 |`STD` | Maximum (`numpy.nanstd`) |
 
-With an input array (`numpy.array`) with the shape `(f, x, y)`, the output of `fData.array_stats(array, stat_type)` has the shape `(x, y)`; where `f` is the number of files provided, `x`is the number of data rows, and `y` is the number of data columns. 
+With an input array (`numpy.array`) with the shape `(f, x, y)`, the output of `fData.array_stats(array, stat_type)` has the shape `(x, y)`; where `f` is the number of files provided, `x` is the number of data rows, and `y` is the number of data columns. 
 
 # Requirements
 The code is designed for being used with [Python Anaconda](https://www.anaconda.com/distribution/). With Python Anaconda installed, used the provided `environment.yml` file to create a conda environment:
 
 1. Open Anaconda prompt
-1. Navigate to the download directoy of this packages (use [`cd`](https://www.digitalcitizen.life/command-prompt-how-use-basic-commands))
+1. Navigate to the download directory of this packages (use [`cd`](https://www.digitalcitizen.life/command-prompt-how-use-basic-commands))
 1. Enter `conda env create -f environment.yml` (this creates the environment `geopython`)
 1. [OPTIONAL] To install more packages, type (in Anaconda prompt):
-	- `conda activate geo-python`
-	- `conda install PACKAGE_NAME`
-	
-In order to use the new environment, download a Python IDE (e.g., Spyder (provided along with Anaconda) or [PyCharm](https://www.jetbrains.com/de-de/pycharm/download/#section=windows)).
+    - `conda activate geo-python`
+    - `conda install PACKAGE_NAME`
+    
+To use the new environment, download a Python IDE (e.g., Spyder (provided along with Anaconda) or [PyCharm](https://www.jetbrains.com/de-de/pycharm/download/#section=windows)).
