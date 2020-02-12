@@ -17,17 +17,19 @@ def array_stats(array, stat_type='MAX'):
     return np.array(stats)
 
 
+
 def calc_stats(value_list, stat_type='MAX'):
     """ calculates statistics of the list of values provided in value_list
     :param value_list: LIST
-    :param stat_type: STR (default = 'MAX'; options: 'MIN', 'MEAN', 'MED', STD')
+    :param stat_type: STR (default = 'MAX'; options: 'MIN', 'MEAN', 'MED', STD', 'SUM' added)
     :return: float
     """
     stat_dict = {'MAX': partial(np.nanmax, value_list),
                  'MIN': partial(np.nanmin, value_list),
                  'MEAN': partial(np.nanmean, value_list),
                  'MED': partial(np.nanmedian, value_list),
-                 'STD': partial(np.nanstd, value_list)}
+                 'STD': partial(np.nanstd, value_list),
+                 'SUM': partial(np.nansum, value_list)}
     return stat_dict[stat_type]()
 
 
