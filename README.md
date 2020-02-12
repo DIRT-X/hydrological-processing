@@ -10,10 +10,10 @@ Python package for automating data processing. Current capacities:
 |:---------------:|:-------:|
 |`config.py` | Repetitively used variables (e.g., `no_data_value = -9999`) |
 |`fData.py` | pool of functions |
-|`main.py` | main script for [[Usage]]|
-|`environment.yml`| conda environment (see [[Requirements]])|
+|`main.py` | main script for [Usage](#usage)|
+|`environment.yml`| conda environment (see [Requirements](#requirements))|
 
-# Usage
+# Usage<a name="usage"></a>
 ## Getting startd
 For normal usage, redefine `file_dir` with the directry where data files are stored. The variable `file_names` comes from `fData.list_file_type_in_dir('directory', 'file_type')`, which receives `file_dir` and `'*'` (for all file types) as input arguments.
 The variable `file_contents` is filled from `fData.read_multiple_files('file_names')` and has the size of `number of files` x `rows` x `columns` (please note: this step can take some time depending on the number of files).
@@ -33,7 +33,7 @@ The function `fData.array_stats(array, stat_type)` calculates the following arra
 
 With an input array (`numpy.array`) with the shape `(f, x, y)`, the output of `fData.array_stats(array, stat_type)` has the shape `(x, y)`; where `f` is the number of files provided, `x` is the number of data rows, and `y` is the number of data columns. 
 
-# Requirements
+# Requirements<a name="requirements"></a>
 The code is designed for being used with [Python Anaconda](https://www.anaconda.com/distribution/). With Python Anaconda installed, used the provided `environment.yml` file to create a conda environment:
 
 1. Open Anaconda prompt
