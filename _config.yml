@@ -1,1 +1,5 @@
-theme: jekyll-theme-minimal
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "air"
+title: "DIRT-X Banja Analysis Tools"
+header:
+  teaser: https://github.com/sschwindt/dirtx/raw/master/pool/icon.jpg
