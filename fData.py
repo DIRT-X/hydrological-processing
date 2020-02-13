@@ -1,4 +1,4 @@
-import sys, os, glob
+import os, glob
 import numpy as np
 import config
 from functools import partial
@@ -17,11 +17,10 @@ def array_stats(array, stat_type='MAX'):
     return np.array(stats)
 
 
-
 def calc_stats(value_list, stat_type='MAX'):
     """ calculates statistics of the list of values provided in value_list
     :param value_list: LIST
-    :param stat_type: STR (default = 'MAX'; options: 'MIN', 'MEAN', 'MED', STD', 'SUM' added)
+    :param stat_type: STR (default = 'MAX'; options: 'MIN', 'MEAN', 'MED', 'STD', 'SUM')
     :return: float
     """
     stat_dict = {'MAX': partial(np.nanmax, value_list),
@@ -68,11 +67,19 @@ def read_multiple_files(list_of_files):
     :param list_of_files: LIST of STR of full file dirs
     :return: np.array (dimensions: file x rows x columns)
     """
-    print("Reading {0} files (takes a while) ...".format(str(list_of_files.__len__())))
     file_contents = []
     for file_dir in list_of_files:
         file_contents.append(read_file(file_dir))
     return np.array(file_contents)
 
+
+def save_result(data_array, file_name):
+    """ saves data array to file_name
+    :param data_array: numpy.array
+    :param file_name: STR
+    """
+    print(" - saving %s ... " % str(file_name))
+    with open(file_name, 'wb') as f:
+        np.savetxt(f, data_array)
 
 
