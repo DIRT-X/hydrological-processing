@@ -1,5 +1,6 @@
-import os, glob
+import os, sys, glob
 import numpy as np
+sys.path.append(os.path.dirname(__file__) + "\\pool\\")
 import config
 from functools import partial
 

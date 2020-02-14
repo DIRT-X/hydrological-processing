@@ -2,9 +2,12 @@ try:
     import sys, os
     sys.path.append(os.path.dirname(__file__) + "\\pool\\")
     from config import *
-    import file_analyzer as fa
 except:
     print("ERROR: Could not import config.")
+try:
+    import file_analyzer as fa
+except:
+    print("ERROR: Could not import file_analyzer.")
 
 
 class Xgui(tk.Frame):
