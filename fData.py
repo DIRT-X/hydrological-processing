@@ -1,6 +1,8 @@
-import os, sys, glob
-import numpy as np
-sys.path.append(os.path.dirname(__file__) + "\\pool\\")
+import os, glob
+try:
+    import numpy as np
+except:
+    print("ERROR: Package numpy not installed (make sure to use the provided Conda environment).")
 import config
 from functools import partial
 
