@@ -4,7 +4,7 @@ Python package for automating data processing. Current capacities:
 - Read files with same data field size as `numpy.array` (dimensions: `number of files` x `rows` x `columns`)
 
 # Requirements<a name="requirements"></a>
-The code is designed for being used with [Python Anaconda](https://www.anaconda.com/distribution/). With Python Anaconda installed in a LOCAL user folder (e.g., *C:\users\<your-user-name>\AppData\Local\*). Note that the batchfile only works on Windows (please contact [me]() for Unix-based solutions).
+The code is designed for being used with [Python Anaconda](https://www.anaconda.com/distribution/). With Python Anaconda installed in a LOCAL user folder (e.g., *C:\users\<your-user-name>\AppData\Local*). Note that the batchfile only works on Windows (please contact [me](https://sebastian-schwindt.org/contact.html) for Unix-based solutions).
  
 Use the provided `environment.yml` file to create a conda environment:
 
@@ -33,7 +33,7 @@ The pool folder includes static values (e.g., written into the `config` file) an
 ## Getting started
 The main script `launch_gui.py` can be launched with a double-click on `start_gui.bat` (on Windows only). If nothing happens after double-clicking, verify that the conda environment is correctly installed in a LOCAL user folder (see [requirements](#requirements)).  If the batchfile execution fails, use the new environment with a Python IDE (e.g., Spyder (provided along with Anaconda) or [PyCharm](https://www.jetbrains.com/de-de/pycharm/download/#section=windows)). Alternatively, it is currently sufficient to install the `numpy` package to any *Python3* versions and run `launch_gui` within that *Python3* executable.
 
-Launching the main script `launch_gui.py` opens up a graphical user interface (GUI). For help with getting started with Python, refer to the [[Requirements]] section.
+Launching the main script `launch_gui.py` opens up a graphical user interface (GUI). For help with getting started with Python, refer to the [Requirements](#requirements) section.
 
 ![guiimage](https://github.com/sschwindt/dirtx/raw/master/media/gui.png)
 
