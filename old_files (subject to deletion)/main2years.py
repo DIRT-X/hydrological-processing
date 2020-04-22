@@ -6,7 +6,7 @@ def main():
     # file_dir = 'P:\\aktiv\\2018_DIRT-X\\DIRT-X_Intern\\10_Data\\01_Banja\\Precip_Banja\\'
     # file_dir = 'C:\\Users\\Mouris\\Desktop\\Prec_SSC_Meas\\'
     # file_dir = 'C:\\Users\\Mouris\\Desktop\\Test_Prec2\\'
-    file_dir = 'C:\\Users\\Mouris\\Desktop\\Prec_2_years\\'
+    file_dir = 'P:\\aktiv\\2018_DIRT-X\\DIRT-X_Intern\\10_Data\\01_Banja\\Precip_Banja_corr_temp\\2_years'
 
     file_names = list_file_type_in_dir(file_dir, '*')
     file_contents = read_multiple_files(file_names)

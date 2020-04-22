@@ -23,6 +23,7 @@ def process_files(file_dir, mode='exact', stat_glob='MAX', stat_time='MAX'):
         array_stack = np.array(time_window_results)
     else:
         array_stack = read_multiple_files(file_dict.values())
+
     save_result(array_stats(array_stack, stat_type=stat_glob.upper()), config.save_file_dir + "result_" + mode + stat_time.upper() + "_" + stat_glob.upper())
 
 
